@@ -1,8 +1,7 @@
 import React, {Component, Fragment} from 'react';
 import FB from 'react-facebook-login';
-// import Auth from '../auth/Auth.js';
 
-export default class Dash extends Component {
+export default class Auth extends Component {
     constructor(props) {
         super(props)
         this.state = {
@@ -36,6 +35,7 @@ export default class Dash extends Component {
 
     responseFacebook = response => {
         console.log('response: ', response)
+        // move state to redux and refactor content on dashboard to be protected with HOC Auth components
 
         this.setState({
             isLoggedIn : true,
